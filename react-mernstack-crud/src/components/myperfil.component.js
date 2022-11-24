@@ -326,7 +326,7 @@ export default class Search extends Component {
             <Form.Group className="w-50 float-end">
               <Button
                 type="button"
-                className="btn btn-success w-100 btn-block m-auto"
+                className="btn mt-4 btn-success w-100 btn-block m-auto"
                 hidden={true ? this.state.disabled : false}
                 onClick={this.handleActualizar.bind(this)}
               >
