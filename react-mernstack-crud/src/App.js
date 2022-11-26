@@ -1,19 +1,18 @@
 //import "./App.css";
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import Nav from 'react-bootstrap/Nav';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {  CDBBtn, CDBIcon, CDBBox} from 'cdbreact';
-import { Form, Button} from "react-bootstrap";
+//import { Form, Button} from "react-bootstrap";
 import { Dropdown} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
-
-
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -34,17 +33,15 @@ import Profile from "./components/myperfil.component";
 
 
 
+
 function App() {
   return (
     <Router>
     <div className="App">
-    <header className="App-header">
-            <Navbar bg="black" variant="dark">
-            <Container>
-    
-    <Navbar.Brand>        
-    
-    <a href="/" className="d-flex align-items-center p-0 text-dark">
+
+     <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+      <Container>
+        <Navbar.Brand href="/">  <a href="/" className="d-flex align-items-center p-0 text-dark">
       <Link to={"/create-product"} className="nav-link">
           <img
           alt=""
@@ -55,34 +52,18 @@ function App() {
         />{' '}            
           
       </Link>
-        <span className="ml-3 h5 font-weight-bold">LA PLAZA CAMPESINA</span>
-      </a>
-      </Navbar.Brand>
-
-      <Form.Group className="w-50 h7 px-20">
-
-      <Button 
-            className="bg-black  mt-2 w-25"
-          
-            >
-             <a href="/home">Home</a>
-      </Button>
-      <Button 
-            className="bg-black  mt-2 w-25 "
-           
-            >
-             <a href="/">Login</a>
-      </Button>
-      <Button
-            className=" mt-2 w-25 bg-black "
-        
-            >
-             <a href="/signup">Register</a>
-      </Button>
+        <span className="ml-3 w-20 h5 font-weight-bold">LA PLAZA CAMPESINA</span>
+      </a></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/">Login</Nav.Link>
+            <Nav.Link href="/signup">Register</Nav.Link>
             
-      </Form.Group>
-      
-                            <Dropdown.Header>
+          </Nav>
+          <Nav>
+          <Dropdown.Header>
                             <CDBBtn className="mx-3 p-2 rounded-3">
                             <img
           alt=""
@@ -93,14 +74,14 @@ function App() {
         />{' '}
         
         <Dropdown.Item href="/ " className="20">Cerrar sesión</Dropdown.Item>
-    </CDBBtn> </Dropdown.Header>
-                         
-                        
+    </CDBBtn> </Dropdown.Header> 
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
-      
-    </Container>
-            </Navbar>
-          </header>
+
+
           <Container>
           <Row>
             <Col md={12}>
@@ -243,8 +224,5 @@ function App() {
 }
 
 export default App;
-
-
-
 
 
