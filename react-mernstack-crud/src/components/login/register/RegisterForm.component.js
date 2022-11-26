@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button, Col, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Redirect } from "react-router";
+import { Redirect } from "react-router-dom"
 import axios from "axios";
 export default class SignUp extends Component {
   constructor(props) {
